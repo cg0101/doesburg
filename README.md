@@ -58,10 +58,10 @@ isShowOriginCloseBtn | Boolean类型，统一设置是否显示自带的关闭�
             通过layout中每一项的type类型，从注册的组件中渲染对应组件
         * 示例:
             ```javascript
-            import VueGrid from 'alt-vue-grid-layout'
+            import doesburg from 'doesburg'
             import Type1 from './Type1.vue';
  
-            let Grid = VueGrid.createGrid()
+            let Grid = doesburg.createGrid()
 
             Grid.addWidgetType('type1', Type1)
             let layout = [
@@ -76,11 +76,11 @@ isShowOriginCloseBtn | Boolean类型，统一设置是否显示自带的关闭�
             通过layout中每一项的type类型，从注册的组件中渲染对应组件
         * 示例:
             ```javascript
-            import VueGrid from 'alt-vue-grid-layout'
+            import doesburg from 'doesburg'
             import Type1 from './Type1.vue';
             import Type2 from './Type2.vue';
  
-            let Grid = VueGrid.createGrid()
+            let Grid = doesburg.createGrid()
 
             Grid.addWidgetType({
                 type1: Type1,
