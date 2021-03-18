@@ -8,9 +8,9 @@ Doesburg(杜斯伯格)，是一个布局设计器，支持拖拽布局、拖拽�
 </div>
 ```
 ```js
-import VueGrid from 'alt-vue-grid-layout'
+import doesburg from 'doesburg'
  
-let Grid = VueGrid.createGrid()
+let Grid = doesburg.createGrid()
 let layout = [
     {"x":0,"y":0,"w":2,"h":2,"i":"0"},
     {"x":2,"y":0,"w":2,"h":4,"i":"1"},
