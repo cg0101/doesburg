@@ -1,8 +1,9 @@
 {
   "name": "doesburg",
   "version": "1.0.0",
+  "author": ["wangxinglong","zhangchi"],
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "dev": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "build-lib": "vue-cli-service build --target lib --dest libs --name doesburg src/index.js",
     "lint": "vue-cli-service lint"

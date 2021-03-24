@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <h1 style="text-align: center">Doesburg Vue Grid Layout</h1>
+        <h1 style="text-align: center">Doesburg Grid Layout</h1>
         <h2>{{ txt }}</h2>
         <div>
             <div class="layoutJSON">

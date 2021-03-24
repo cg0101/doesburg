@@ -7,5 +7,6 @@ module.exports = {
   css: {
     extract: false
   },
-  publicPath: './'
+  publicPath: './',
+  outputDir:'./docs'
 }
