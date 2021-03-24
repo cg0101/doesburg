@@ -21,5 +21,5 @@ https://echoes-link.github.io/doesburg/index.html
 
 [MIT](https://opensource.org/licenses/MIT)
 
-Copyright (c) 2013-present, zhangchi && wangxinglong
+Copyright (c) 2013-present, zhangchi & wangxinglong
 
