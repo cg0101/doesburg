@@ -1,6 +1,5 @@
-// import Vue from "vue";
 import VueGridLayout from './components/Grid.vue';
-import altStore from './alt-store/index'
+import DbStore from './store/index'
 
 
 function factory(options = {}){
@@ -10,16 +9,15 @@ function factory(options = {}){
         components: {}
     };
 
-    if(options.altStore && options.altStore instanceof altStore.Store){
-        grid.altStore = options.altStore;
+    if(options.dbStore && options.dbStore instanceof DbStore.Store){
+        grid.dbStore = options.dbStore;
     }
 
     return grid;
 }
 
-// export default VueGridLayout;
 export default {
     createGrid: factory,
     grid: VueGridLayout,
-    altStore: altStore
+    DbStore: DbStore
 };

@@ -48,9 +48,9 @@
     import Coordinate from '../utils/coordinate'
     import coorTest from '../utils/coordinate.test.js'
  
-    import WidgetRender from './Widget.render.vue';
-    import WidgetTemplate from './Widget.template.vue';
-    import WidgetComponent from './Widget.vuecomponent.vue';
+    import WidgetRender from './WidgetRender.vue';
+    import WidgetTemplate from './WidgetTemplate.vue';
+    import WidgetComponent from './WidgetComponent.vue';
 
     import props from './props.js'
 

@@ -47,9 +47,9 @@
 <script>
     // import {getDocumentDir, setDocumentDir} from "./helpers/DOM";
     import GridLayout from './index';
-    import testA from './test-components/test-a.vue';
-    import testB from './test-components/test-b.vue';
-    import testD from './test-components/test-d.vue';
+    import testA from './tests/test-a.vue';
+    import testB from './tests/test-b.vue';
+    import testD from './tests/test-d.vue';
     import Vue from 'vue';
 
     let vue = Vue;
