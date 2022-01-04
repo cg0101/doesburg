@@ -49,7 +49,7 @@
 
 <script>
 // import {getDocumentDir, setDocumentDir} from "./helpers/DOM";
-import GridLayout from "./index";
+import doesburg from "./index";
 import testA from "./tests/test-a.vue";
 import testB from "./tests/test-b.vue";
 import testD from "./tests/test-d.vue";
@@ -58,9 +58,9 @@ import Vue from "vue";
 let vue = Vue;
 console.log(vue);
 
-Vue.use(GridLayout.altStore);
+Vue.use(doesburg.altStore);
 
-let store = new GridLayout.altStore.Store({
+let store = new doesburg.altStore.Store({
   state: {
     count: 0,
   },
@@ -71,7 +71,7 @@ let store = new GridLayout.altStore.Store({
   },
 });
 
-let Grid = GridLayout.createGrid();
+let Grid = doesburg.createGrid();
 // console.log(Grid)
 Grid.addWidgetType({
   testA: testA,
