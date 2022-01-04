@@ -2,7 +2,7 @@
 
 A grid layout system for Vue.js, like Gridster, for Vue.js. Heavily inspired by React-Grid-Layout and Vue-Grid-Layout
 
-## 如何使用
+## Quick Start
 
 ```html
 <div>
@@ -32,7 +32,7 @@ new Vue({
 }
 ```
 
-## 全局配置属性
+## Global Config
 
 | 属性                 | 说明                                                                                                 | 默认值                  |
 | -------------------- | ---------------------------------------------------------------------------------------------------- | ----------------------- |
@@ -51,7 +51,7 @@ new Vue({
 | placeholderClass     | String 类型，统一设置占位符的 class                                                                  | <空>                    |
 | isShowOriginCloseBtn | Boolean 类型，统一设置是否显示自带的关闭按钮，可以使用注册组件的 this.altCardProps.close()来关闭组件 | true                    |
 
-## 方法
+## Global Methods
 
 -   `addWidgetType`注册组件类型
 
@@ -99,7 +99,7 @@ new Vue({
             ];
             ```
 
-## 实例方法
+## Instance Methods
 
 -   setLayout(layout)
 
@@ -148,7 +148,7 @@ new Vue({
     -   参数：
         -   {String} id 卡片 id
 
-## 事件
+## Events
 
 -   move(item) 移动任意卡片
     -   参数:
@@ -165,7 +165,7 @@ new Vue({
         -   {Object} item 被改变大小的元素
         -   {Object} newSize 改变后的像素大小，{width: 20px, height: 30px}
 
-## 组件
+## Component Type
 
 组件是一个 Object，类 vue 对象结构，暂时不支持 vue 子类，如
 
@@ -179,7 +179,7 @@ let type1 = {
 
 组件内部支持 vue 的生命周期
 
-### 组件事件
+### Component Events
 
 组件内部可以通过 this.\$on('eventName', fn)来监听事件
 
@@ -198,33 +198,33 @@ let type1 = {
         -   {Object} item 当前元素
         -   {Object} newSize 改变后的像素大小，{width: 20px, height: 30px}
 
-### 组件方法
+### Component Methods
 
 组件内部可以通过`this.altCardProps.close()`来关闭当前组件
 
-### 组件公共属性
+### Component Public Methods
 
 组件内部可以通过`this.altCardProps.card`获取 layout 中当前组件的参数
 
-## 项目启动
+## Start
 
 ```
 yarn install
 ```
 
-### 开发模式
+### Dev Mode
 
 ```
 yarn run serve
 ```
 
-### 编译为页面
+### Build
 
 ```
 yarn run build
 ```
 
-### 编译为库
+### Build Lib
 
 ```
 yarn run build-lib
