@@ -1,16 +1,14 @@
 // import Vue from "vue";
-import VueGridLayout from './components/Grid.vue';
-import altStore from './alt-store/index'
+import VueGridLayout from "./components/grid.vue";
+import altStore from "./alt-store/index";
 
-
-function factory(options = {}){
-
+function factory(options = {}) {
     let grid = {
         ...VueGridLayout,
-        components: {}
+        components: {},
     };
 
-    if(options.altStore && options.altStore instanceof altStore.Store){
+    if (options.altStore && options.altStore instanceof altStore.Store) {
         grid.altStore = options.altStore;
     }
 
@@ -21,5 +19,5 @@ function factory(options = {}){
 export default {
     createGrid: factory,
     grid: VueGridLayout,
-    altStore: altStore
+    altStore: altStore,
 };
