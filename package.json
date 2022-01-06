@@ -14,6 +14,7 @@
     "main": "libs/doesburg.umd.min.js",
     "dependencies": {
         "core-js": "^2.6.5",
+        "doesburg": "^1.0.0",
         "vue": "^2.6.10"
     },
     "devDependencies": {

@@ -2730,6 +2730,14 @@ doctrine@^3.0.0:
   dependencies:
     esutils "^2.0.2"
 
+doesburg@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/doesburg/-/doesburg-1.0.0.tgz#d1fcc666a8fb76d7a5dfd4b777fc4d0e7b95e0d8"
+  integrity sha512-odaRAbiJP8CL+pCz3evDEJ5qKvGUeH5b6Nebs4+vYc9MavAvQhZ3FhfQCPHoc90xfZBiNjKfnwW1GiWgzYeK3g==
+  dependencies:
+    core-js "^2.6.5"
+    vue "^2.6.10"
+
 dom-converter@^0.2:
   version "0.2.0"
   resolved "https://registry.npm.taobao.org/dom-converter/download/dom-converter-0.2.0.tgz#6721a9daee2e293682955b6afe416771627bb768"

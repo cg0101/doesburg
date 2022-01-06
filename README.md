@@ -5,32 +5,36 @@ A grid layout system for Vue.js, like Gridster, for Vue.js. Heavily inspired by 
 ## Quick Start
 
 ```html
-<div>
+  <div>
     <grid ref="grid"></grid>
-</div>
+  </div>
 ```
 
 ```js
-import doesburg from 'doesburg'
 
-let Grid = doesburg.createGrid()
-let layout = [
-    {"x":0,"y":0,"w":2,"h":2,"i":"0"},
-    {"x":2,"y":0,"w":2,"h":4,"i":"1"},
-    {"x":4,"y":0,"w":2,"h":5,"i":"2"},
-    {"x":6,"y":0,"w":2,"h":3,"i":"3"},
-    {"x":8,"y":0,"w":2,"h":3,"i":"4"}
-]
+import doesburg from "doesburg";
 
-new Vue({
-    components: {
-        Grid
-    },
-    mounted(){
-        this.$refs.grid.setLayout(layout)
-    }
-}
+const Grid = doesburg.createGrid();
+const layout = [
+  { x: 0, y: 0, w: 2, h: 2, i: "0" },
+  { x: 2, y: 0, w: 2, h: 4, i: "1" },
+  { x: 4, y: 0, w: 2, h: 5, i: "2" },
+  { x: 6, y: 0, w: 2, h: 3, i: "3" },
+  { x: 8, y: 0, w: 2, h: 3, i: "4" },
+];
+export default {
+  components: {
+    Grid,
+  },
+  mounted() {
+    this.$refs.grid.setLayout(layout);
+  },
+};
 ```
+
+## Example
+
+- [Component example page](./examples/vue2-component-example/src/App.vue)
 
 ## Global Config
 
