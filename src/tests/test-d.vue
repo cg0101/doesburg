@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>组件D</h1>
+        <h1>Component-D</h1>
         <p>{{ altCardProps.card.name }}</p>
         <p>{{ text }}</p>
     </div>

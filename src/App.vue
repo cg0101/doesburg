@@ -1,30 +1,59 @@
 <template>
-  <div id="app">
-    <h1 style="text-align: center">Doesburg Grid Layout</h1>
-    <h2>{{ txt }}</h2>
-    <div>
-      <div class="layoutJSON">
-        Displayed as <code>[x, y, w, h]</code>:
-        <div class="columns">
-          <span class="layoutItem" v-for="item in layout" :key="item.i">
-            <b>{{ item.i }}</b
-            >: [{{ item.x }}, {{ item.y }}, {{ item.w }}, {{ item.h }}]
-          </span>
+  <div id="app" style="background-color: #f4f6f9" class="h-screen">
+    <div class="p-2 bg-white" style="border-bottom: 1px solid #d8dde8">
+      <div class="text-center">Doesburg Grid Layout</div>
+      <div>{{ txt }}</div>
+      <div>
+        <div class="layoutJSON">
+          Displayed as <code>[x, y, w, h]</code>:
+          <div class="columns">
+            <span class="layoutItem" v-for="item in layout" :key="item.i">
+              <b>{{ item.i }}</b
+              >: [{{ item.x }}, {{ item.y }}, {{ item.w }}, {{ item.h }}]
+            </span>
+          </div>
         </div>
       </div>
-    </div>
-    <div id="content">
       <input type="checkbox" v-model="draggable" /> Draggable
       <input type="checkbox" v-model="resizable" /> Resizable
-      <div style="margin-top: 10px; margin-bottom: 10px">
-        Row Height: <input type="number" v-model="rowHeight" /> Col nums:
-        <input type="number" v-model="colNumStr" />
+      <div class="flex flex-col">
+        <div class="flex">
+          <div class="flex">
+            Row Height:
+            <input class="border pl-2" type="number" v-model="rowHeight" />
+          </div>
+          <div class="flex ml-2">
+            Col Nums:<input
+              class="border pl-2"
+              type="number"
+              v-model="colNumStr"
+            />
+          </div>
+        </div>
+        <div class="flex">
+          <div class="flex">
+            Right Margin
+            <input class="border pl-2" type="number" v-model="margin[0]" />
+          </div>
+          <div class="flex ml-2">
+            Bottom Margin
+            <input class="border pl-2" type="number" v-model="margin[1]" />
+          </div>
+        </div>
+        <div class="flex">
+          Background Color
+          <input class="border pl-2" type="text" v-model="bgcolor" />
+        </div>
       </div>
-      right margin <input type="number" v-model="margin[0]" /> bottom margin
-      <input type="number" v-model="margin[1]" /> background color
-      <input type="text" v-model="bgcolor" />
-      <button @click="addItem">addItem</button>
-      <div id="container">
+      <div>
+        <button class="bg-blue-500 text-white p-1" @click="addItem">
+          addItem
+        </button>
+      </div>
+    </div>
+
+    <div id="content">
+      <div id="container" class="pb-44">
         <grid
           @updated="gridUpdated"
           v-show="isGridShow"
@@ -72,7 +101,7 @@ let store = new doesburg.altStore.Store({
 });
 
 let Grid = doesburg.createGrid();
-// console.log(Grid)
+
 Grid.addWidgetType({
   testA: testA,
   testB: testB,
@@ -293,26 +322,8 @@ export default {
 };
 </script>
 
-<style>
-/* #container {
-        height: 500px;
-        overflow: auto;
-        width: 1083px;
-    } */
-</style>
 
 <style>
-body {
-  background: #eee;
-}
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  /*text-align: center;*/
-  color: #2c3e50;
-  /*margin-top: 60px;*/
-}
 .color0 {
   background: goldenrod !important;
 }
@@ -326,6 +337,6 @@ body {
   background: cadetblue !important;
 }
 .color4 {
-  background: saddlebrown !important;
+  background: orange !important;
 }
 </style>
