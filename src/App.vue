@@ -1,7 +1,7 @@
 <template>
   <div id="app" style="background-color: #f4f6f9" class="h-screen">
     <div class="p-2 bg-white" style="border-bottom: 1px solid #d8dde8">
-      <div class="text-center">Doesburg Grid Layout</div>
+      <div class="text-center text-blue-500 text-2xl">Doesburg Grid Layout</div>
       <div>{{ txt }}</div>
       <div>
         <div class="layoutJSON">
