@@ -7,7 +7,7 @@
     ],
     "scripts": {
         "dev": "vue-cli-service serve",
-        "build": "vue-cli-service build",
+        "docs": "vue-cli-service build",
         "build-lib": "vue-cli-service build --target lib --dest libs --name doesburg src/index.js",
         "lint": "vue-cli-service lint"
     },
@@ -36,7 +36,8 @@
             "eslint:recommended"
         ],
         "rules": {
-            "no-console": 0
+            "no-console": 0,
+            "no-mixed-spaces-and-tabs":0
         },
         "parserOptions": {
             "parser": "babel-eslint"

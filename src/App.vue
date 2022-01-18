@@ -123,86 +123,43 @@ let testLayout = [
   {
     x: 0,
     y: 0,
-    w: 2,
-    h: 2,
+    w: 3,
+    h: 3,
     i: "0",
-    maxW: 3,
-    maxH: 3,
+    // maxW: 3,
+    // maxH: 3,
     name: "nihaowxl",
     type: "testA",
     resizable: true,
     isDraggable: true,
   },
   {
-    x: 2,
+    x: 3,
     y: 0,
-    w: 3,
+    w: 6,
     h: 2,
     i: "1",
     name: "123",
-    minH: 2,
-    minW: 2,
+    // minH: 2,
+    // minW: 2,
     type: "testB",
     resizable: null,
     isDraggable: null,
   },
+
+
   {
-    x: 5,
-    y: 0,
-    w: 2,
-    h: 2,
-    i: "2",
-    name: "22",
-    type: "testC",
-    resizable: false,
-    isDraggable: true,
-  },
-  {
-    x: 7,
-    y: 0,
-    w: 4,
-    h: 2,
-    i: "3",
-    name: "334",
-    gridItemClass: "ceshi-class",
-    closeHandlerClass: "ceshi-close-class",
-    resizeHandlerClass: "ceshi-resize-class",
-    resizable: false,
-    draggable: false,
-  },
-  {
-    x: 11,
-    y: 0,
-    w: 1,
-    h: 2,
+    x: 0,
+    y: 3,
+    w: 3,
+    h: 3,
     i: "4",
     type: "testD",
     name: "wakaka",
     resizable: false,
     isDraggable: true,
   },
-  // {"x":10,"y":0,"w":2,"h":2,"i":"5", resizable: false, draggable: false},
-  {
-    x: 0,
-    y: 2,
-    w: 2,
-    h: 2,
-    i: "6",
-    name: "1222",
-    resizable: false,
-    isDraggable: true,
-  },
-  {
-    x: 2,
-    y: 2,
-    w: 2,
-    h: 2,
-    i: "7",
-    name: "13",
-    resizable: false,
-    isDraggable: true,
-    isShowOriginCloseBtn: true,
-  },
+
 ];
 let layout2 = [
   { x: 0, y: 0, w: 8, h: 6 },
@@ -278,7 +235,11 @@ export default {
       this.layout.splice(this.layout.indexOf(item), 1);
     },
     addItem: function () {
-      this.$refs.altGrid.addItem();
+      this.$refs.altGrid.addItem({
+        w:3,
+        h:3,
+        type:"testA"
+      });
     },
     move: function (item) {
       console.log("MOVE i=" + item.i + ", X=" + item.x + ", Y=" + item.y);
@@ -324,7 +285,16 @@ export default {
 
 
 <style>
-.color0 {
+.alt-grid-item{
+  background-color: #fff!important;;
+  box-shadow: 1px 5px 10px #ccc;
+}
+.ceshi-global-close{
+  position: absolute; 
+  right: 10px;
+  color: #9ca3af;
+}
+/* .color0 {
   background: goldenrod !important;
 }
 .color1 {
@@ -338,5 +308,5 @@ export default {
 }
 .color4 {
   background: orange !important;
-}
+} */
 </style>
