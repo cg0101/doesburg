@@ -2,6 +2,9 @@
 
 A grid layout system for Vue.js, like Gridster, for Vue.js. Heavily inspired by React-Grid-Layout and Vue-Grid-Layout
 
+# Overview
+<img src="./assets/example.png" align="left" />
+
 ## Quick Start
 
 ```html
